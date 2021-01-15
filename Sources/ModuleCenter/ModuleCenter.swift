@@ -19,7 +19,7 @@ public protocol Module {
 extension Module {
     
     public static var name: String {
-        return String(describing: shared)
+        return String(describing: self)
     }
     
     public static var pattern: String {
