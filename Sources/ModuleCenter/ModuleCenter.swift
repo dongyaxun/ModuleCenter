@@ -31,11 +31,11 @@ public struct ModuleCenter {
     
     public static let shared = ModuleCenter()
     
+    public let navigator: NavigatorType
+    
     private init() {
         navigator = Navigator()
     }
-    
-    private let navigator: NavigatorType
     
     public func register<T>(_ module: T.Type) where T: Module {
         T.initialize(navigator: navigator)
